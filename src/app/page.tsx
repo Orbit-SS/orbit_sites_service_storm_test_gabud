@@ -39,7 +39,7 @@ export default function Home() {
               className="text-xl tracking-widest uppercase font-serif font-bold"
               style={{ color: scrolled ? "oklch(0.93 0.03 90)" : "oklch(0.97 0.02 95)", letterSpacing: "0.15em" }}
             >
-              Gabud
+              Hello
             </span>
           </a>
 
@@ -173,7 +173,7 @@ export default function Home() {
           className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold leading-none mb-6"
           style={{ color: "oklch(0.97 0.02 95)", letterSpacing: "-0.01em" }}
         >
-          Gabud
+          Hello
           <br />
           <span style={{ color: "oklch(0.72 0.12 80)" }}>Monastery</span>
         </h1>
@@ -247,7 +247,7 @@ export default function Home() {
               Eight Centuries of<br />Sacred Life
             </h2>
             <p className="text-base leading-loose mb-6" style={{ color: "oklch(0.42 0.03 60)" }}>
-              Gabud Monastery was founded in 1247 by a small community of contemplative monks seeking
+              Hello Monastery was founded in 1247 by a small community of contemplative monks seeking
               solitude in the mountain highlands. Over eight centuries, the monastery has grown into
               a living center of prayer, hospitality, and the arts — while remaining anchored to the
               ancient Rule that shaped its founding vision.
@@ -325,7 +325,7 @@ export default function Home() {
               The Rhythm of Our Days
             </p>
             <h2 className="font-serif text-4xl md:text-5xl font-bold" style={{ color: "oklch(0.93 0.03 90)" }}>
-              Life at Gabud
+              Life at Hello
             </h2>
           </div>
 
@@ -402,7 +402,7 @@ export default function Home() {
             Retreats & Pilgrimages
           </h2>
           <p className="mt-4 text-base max-w-xl mx-auto" style={{ color: "oklch(0.52 0.03 60)" }}>
-            Gabud welcomes guests of all traditions for days of silence, guided retreats, and
+            Hello welcomes guests of all traditions for days of silence, guided retreats, and
             pilgrim hospitality. All are welcome at our table.
           </p>
         </div>
@@ -538,7 +538,7 @@ export default function Home() {
                   </svg>
                 ),
                 title: "Oblate Community",
-                desc: "Nearly 200 oblates around the world live the Gabud charism in their daily lives — joining our community from a distance through prayer, study, and annual gatherings.",
+                desc: "Nearly 200 oblates around the world live the Hello charism in their daily lives — joining our community from a distance through prayer, study, and annual gatherings.",
               },
               {
                 icon: (
@@ -603,7 +603,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                quote: "A week at Gabud gave me more than a year of ordinary life. The silence was not empty — it was full.",
+                quote: "A week at Hello gave me more than a year of ordinary life. The silence was not empty — it was full.",
                 name: "Elena M.",
                 from: "Prague, Czech Republic",
               },
@@ -613,7 +613,7 @@ export default function Home() {
                 from: "Lagos, Nigeria",
               },
               {
-                quote: "The chant, the garden, the library — there is a wholeness to life at Gabud that the world beyond the walls seems to have forgotten.",
+                quote: "The chant, the garden, the library — there is a wholeness to life at Hello that the world beyond the walls seems to have forgotten.",
                 name: "Miriam K.",
                 from: "Seattle, USA",
               },
@@ -648,7 +648,7 @@ export default function Home() {
               Plan Your Visit
             </h2>
             <p className="text-base leading-loose mb-8" style={{ color: "oklch(0.42 0.03 60)" }}>
-              Gabud Monastery sits at 1,840 metres above sea level in the highland region,
+              Hello Monastery sits at 1,840 metres above sea level in the highland region,
               accessible by road or a half-day mountain walk. Accommodation in our guest house
               is offered on a donation basis for those on personal retreat.
             </p>
@@ -657,7 +657,7 @@ export default function Home() {
               {[
                 {
                   label: "Address",
-                  value: "Gabud Monastery, Mountain Highlands\nRegion of St. Columbanus, Est. 1247",
+                  value: "Hello Monastery, Mountain Highlands\nRegion of St. Columbanus, Est. 1247",
                 },
                 {
                   label: "Guestmaster",
@@ -769,7 +769,7 @@ export default function Home() {
           </h3>
           <p className="text-sm mb-6" style={{ color: "oklch(0.52 0.03 60)" }}>
             Receive our seasonal newsletter — reflections from the community, programme announcements,
-            and the quiet news of life at Gabud.
+            and the quiet news of life at Hello.
           </p>
           <form className="flex gap-3 max-w-sm mx-auto" onSubmit={(e) => e.preventDefault()}>
             <input
@@ -808,7 +808,7 @@ export default function Home() {
                   </svg>
                 </div>
                 <span className="font-serif text-xl font-bold tracking-widest uppercase" style={{ color: "oklch(0.93 0.03 90)" }}>
-                  Gabud
+                  Hello
                 </span>
               </div>
               <p className="text-sm leading-loose max-w-xs" style={{ color: "oklch(0.52 0.03 65)" }}>
@@ -831,7 +831,7 @@ export default function Home() {
             <div>
               <p className="text-xs uppercase tracking-widest mb-4" style={{ color: "oklch(0.72 0.12 80)" }}>Community</p>
               <ul className="space-y-2 text-sm">
-                {["About Gabud", "Our History", "Oblates", "Retreats", "Contact"].map((l) => (
+                {["About Hello", "Our History", "Oblates", "Retreats", "Contact"].map((l) => (
                   <li key={l}>
                     <a href="#about" className="hover:opacity-70 transition-opacity">{l}</a>
                   </li>
@@ -842,7 +842,7 @@ export default function Home() {
 
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
             <p style={{ color: "oklch(0.42 0.03 60)" }}>
-              © 2026 Gabud Monastery. Pray and work — <em>ora et labora.</em>
+              © 2026 Hello Monastery. Pray and work — <em>ora et labora.</em>
             </p>
             <div className="flex gap-6">
               {["Privacy", "Terms", "Accessibility"].map((l) => (
