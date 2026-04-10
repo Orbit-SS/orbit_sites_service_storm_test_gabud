@@ -13,12 +13,12 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="min-h-screen" style={{ background: "oklch(0.97 0.02 95)", color: "oklch(0.18 0.02 50)" }}>
+    <main className="min-h-screen" style={{ background: "oklch(0.97 0.02 15)", color: "oklch(0.18 0.03 15)" }}>
       {/* ── Navigation ── */}
       <header
         className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
         style={{
-          background: scrolled ? "oklch(0.18 0.02 50 / 0.95)" : "transparent",
+          background: scrolled ? "oklch(0.18 0.03 15 / 0.95)" : "transparent",
           backdropFilter: scrolled ? "blur(12px)" : "none",
           borderBottom: scrolled ? "1px solid oklch(1 0 0 / 0.1)" : "none",
         }}
@@ -28,7 +28,7 @@ export default function Home() {
             {/* Monastery symbol */}
             <div
               className="w-9 h-9 flex items-center justify-center rounded-full"
-              style={{ background: "oklch(0.72 0.12 80)", color: "oklch(0.18 0.02 50)" }}
+              style={{ background: "oklch(0.55 0.22 20)", color: "oklch(0.18 0.03 15)" }}
             >
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <path d="M10 2L10 6M6 8H14M5 18H15M5 18V10M15 18V10M5 10L10 6L15 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -37,9 +37,9 @@ export default function Home() {
             </div>
             <span
               className="text-xl tracking-widest uppercase font-serif font-bold"
-              style={{ color: scrolled ? "oklch(0.93 0.03 90)" : "oklch(0.97 0.02 95)", letterSpacing: "0.15em" }}
+              style={{ color: scrolled ? "oklch(0.93 0.03 15)" : "oklch(0.97 0.02 15)", letterSpacing: "0.15em" }}
             >
-              Hello
+              Buna
             </span>
           </a>
 
@@ -50,7 +50,7 @@ export default function Home() {
                 key={item}
                 href={`#${item.toLowerCase()}`}
                 className="text-sm uppercase tracking-widest transition-opacity hover:opacity-70"
-                style={{ color: scrolled ? "oklch(0.78 0.05 75)" : "oklch(0.97 0.02 95 / 0.85)", letterSpacing: "0.12em" }}
+                style={{ color: scrolled ? "oklch(0.78 0.05 15)" : "oklch(0.97 0.02 15 / 0.85)", letterSpacing: "0.12em" }}
               >
                 {item}
               </a>
@@ -59,8 +59,8 @@ export default function Home() {
               href="#retreats"
               className="px-5 py-2 text-sm uppercase tracking-widest transition-all hover:opacity-90"
               style={{
-                background: "oklch(0.72 0.12 80)",
-                color: "oklch(0.18 0.02 50)",
+                background: "oklch(0.55 0.22 20)",
+                color: "oklch(0.18 0.03 15)",
                 borderRadius: "2px",
                 letterSpacing: "0.1em",
                 fontWeight: 600,
@@ -74,7 +74,7 @@ export default function Home() {
           <button
             className="md:hidden p-2"
             onClick={() => setMenuOpen(!menuOpen)}
-            style={{ color: scrolled ? "oklch(0.93 0.03 90)" : "oklch(0.97 0.02 95)" }}
+            style={{ color: scrolled ? "oklch(0.93 0.03 15)" : "oklch(0.97 0.02 15)" }}
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
               {menuOpen ? (
@@ -90,14 +90,14 @@ export default function Home() {
 
         {/* Mobile menu */}
         {menuOpen && (
-          <div className="md:hidden px-6 pb-6" style={{ background: "oklch(0.18 0.02 50)" }}>
+          <div className="md:hidden px-6 pb-6" style={{ background: "oklch(0.18 0.03 15)" }}>
             {["About", "Programs", "Retreats", "Community", "Visit"].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
                 onClick={() => setMenuOpen(false)}
                 className="block py-3 text-sm uppercase tracking-widest border-b"
-                style={{ color: "oklch(0.78 0.05 75)", borderColor: "oklch(1 0 0 / 0.08)", letterSpacing: "0.12em" }}
+                style={{ color: "oklch(0.78 0.05 15)", borderColor: "oklch(1 0 0 / 0.08)", letterSpacing: "0.12em" }}
               >
                 {item}
               </a>
@@ -106,7 +106,7 @@ export default function Home() {
               href="#retreats"
               onClick={() => setMenuOpen(false)}
               className="block mt-4 px-5 py-3 text-sm uppercase tracking-widest text-center font-semibold"
-              style={{ background: "oklch(0.72 0.12 80)", color: "oklch(0.18 0.02 50)", borderRadius: "2px" }}
+              style={{ background: "oklch(0.55 0.22 20)", color: "oklch(0.18 0.03 15)", borderRadius: "2px" }}
             >
               Book a Retreat
             </a>
@@ -119,8 +119,8 @@ export default function Home() {
         className="relative min-h-screen flex flex-col items-center justify-center text-center px-6"
         style={{
           background: `
-            radial-gradient(ellipse at 50% 0%, oklch(0.31 0.07 160 / 0.4) 0%, transparent 60%),
-            linear-gradient(180deg, oklch(0.13 0.03 50) 0%, oklch(0.20 0.04 50) 50%, oklch(0.16 0.04 155 / 0.8) 100%)
+            radial-gradient(ellipse at 50% 0%, oklch(0.45 0.20 20 / 0.4) 0%, transparent 60%),
+            linear-gradient(180deg, oklch(0.13 0.03 15) 0%, oklch(0.20 0.04 15) 50%, oklch(0.16 0.04 15 / 0.8) 100%)
           `,
         }}
       >
@@ -129,8 +129,8 @@ export default function Home() {
           className="absolute inset-0 pointer-events-none opacity-10"
           style={{
             backgroundImage: `
-              repeating-linear-gradient(0deg, transparent, transparent 48px, oklch(0.97 0.02 95 / 0.3) 48px, oklch(0.97 0.02 95 / 0.3) 49px),
-              repeating-linear-gradient(90deg, transparent, transparent 48px, oklch(0.97 0.02 95 / 0.15) 48px, oklch(0.97 0.02 95 / 0.15) 49px)
+              repeating-linear-gradient(0deg, transparent, transparent 48px, oklch(0.97 0.02 15 / 0.3) 48px, oklch(0.97 0.02 15 / 0.3) 49px),
+              repeating-linear-gradient(90deg, transparent, transparent 48px, oklch(0.97 0.02 15 / 0.15) 48px, oklch(0.97 0.02 15 / 0.15) 49px)
             `,
           }}
         />
@@ -140,11 +140,11 @@ export default function Home() {
           <div
             className="w-28 h-28 mx-auto flex items-center justify-center rounded-full"
             style={{
-              background: "oklch(0.72 0.12 80 / 0.15)",
-              border: "1px solid oklch(0.72 0.12 80 / 0.4)",
+              background: "oklch(0.55 0.22 20 / 0.15)",
+              border: "1px solid oklch(0.55 0.22 20 / 0.4)",
             }}
           >
-            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" style={{ color: "oklch(0.72 0.12 80)" }}>
+            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" style={{ color: "oklch(0.55 0.22 20)" }}>
               <path d="M32 6L32 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
               <path d="M20 28H44" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
               <path d="M12 56H52" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
@@ -158,29 +158,29 @@ export default function Home() {
           </div>
           <div
             className="absolute -inset-6 rounded-full opacity-20 blur-2xl"
-            style={{ background: "oklch(0.72 0.12 80)" }}
+            style={{ background: "oklch(0.55 0.22 20)" }}
           />
         </div>
 
         <p
           className="text-xs uppercase tracking-[0.4em] mb-4"
-          style={{ color: "oklch(0.72 0.12 80)" }}
+          style={{ color: "oklch(0.55 0.22 20)" }}
         >
           Founded 1247 · Mountain Region
         </p>
 
         <h1
           className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold leading-none mb-6"
-          style={{ color: "oklch(0.97 0.02 95)", letterSpacing: "-0.01em" }}
+          style={{ color: "oklch(0.97 0.02 15)", letterSpacing: "-0.01em" }}
         >
-          Hello
+          Buna
           <br />
-          <span style={{ color: "oklch(0.72 0.12 80)" }}>Monastery</span>
+          <span style={{ color: "oklch(0.55 0.22 20)" }}>Monastery</span>
         </h1>
 
         <p
           className="text-lg md:text-xl max-w-xl mx-auto leading-relaxed mb-10"
-          style={{ color: "oklch(0.78 0.05 75 / 0.85)" }}
+          style={{ color: "oklch(0.78 0.05 15 / 0.85)" }}
         >
           A sanctuary of silence, prayer, and contemplation — where seekers
           find stillness and the ancient rhythms of monastic life.
@@ -191,8 +191,8 @@ export default function Home() {
             href="#retreats"
             className="px-8 py-4 text-sm uppercase tracking-widest font-semibold transition-all hover:scale-105"
             style={{
-              background: "oklch(0.72 0.12 80)",
-              color: "oklch(0.13 0.03 50)",
+              background: "oklch(0.55 0.22 20)",
+              color: "oklch(0.13 0.03 15)",
               borderRadius: "2px",
               letterSpacing: "0.12em",
             }}
@@ -203,8 +203,8 @@ export default function Home() {
             href="#about"
             className="px-8 py-4 text-sm uppercase tracking-widest transition-all hover:opacity-80"
             style={{
-              border: "1px solid oklch(0.72 0.12 80 / 0.5)",
-              color: "oklch(0.97 0.02 95)",
+              border: "1px solid oklch(0.55 0.22 20 / 0.5)",
+              color: "oklch(0.97 0.02 15)",
               borderRadius: "2px",
               letterSpacing: "0.12em",
             }}
@@ -215,12 +215,12 @@ export default function Home() {
 
         {/* Scroll indicator */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-          <span className="text-xs uppercase tracking-widest" style={{ color: "oklch(0.62 0.05 80)" }}>
+          <span className="text-xs uppercase tracking-widest" style={{ color: "oklch(0.62 0.05 15)" }}>
             Scroll
           </span>
           <div
             className="w-px h-12 animate-pulse"
-            style={{ background: "linear-gradient(to bottom, oklch(0.72 0.12 80 / 0.6), transparent)" }}
+            style={{ background: "linear-gradient(to bottom, oklch(0.55 0.22 20 / 0.6), transparent)" }}
           />
         </div>
       </section>
@@ -228,7 +228,7 @@ export default function Home() {
       {/* ── Scripture Banner ── */}
       <section
         className="py-8 px-6 text-center"
-        style={{ background: "oklch(0.72 0.12 80)", color: "oklch(0.18 0.02 50)" }}
+        style={{ background: "oklch(0.55 0.22 20)", color: "oklch(0.18 0.03 15)" }}
       >
         <p className="font-serif text-lg md:text-xl italic font-medium tracking-wide">
           &ldquo;Be still and know that I am God.&rdquo;
@@ -240,19 +240,19 @@ export default function Home() {
       <section id="about" className="py-24 px-6 max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] mb-3" style={{ color: "oklch(0.72 0.12 80)" }}>
+            <p className="text-xs uppercase tracking-[0.3em] mb-3" style={{ color: "oklch(0.55 0.22 20)" }}>
               Our History
             </p>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 leading-tight" style={{ color: "oklch(0.18 0.02 50)" }}>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 leading-tight" style={{ color: "oklch(0.18 0.03 15)" }}>
               Eight Centuries of<br />Sacred Life
             </h2>
-            <p className="text-base leading-loose mb-6" style={{ color: "oklch(0.42 0.03 60)" }}>
-              Hello Monastery was founded in 1247 by a small community of contemplative monks seeking
+            <p className="text-base leading-loose mb-6" style={{ color: "oklch(0.42 0.03 15)" }}>
+              Buna Monastery was founded in 1247 by a small community of contemplative monks seeking
               solitude in the mountain highlands. Over eight centuries, the monastery has grown into
               a living center of prayer, hospitality, and the arts — while remaining anchored to the
               ancient Rule that shaped its founding vision.
             </p>
-            <p className="text-base leading-loose mb-8" style={{ color: "oklch(0.42 0.03 60)" }}>
+            <p className="text-base leading-loose mb-8" style={{ color: "oklch(0.42 0.03 15)" }}>
               Today, our community of forty monks welcomes thousands of guests each year — pilgrims,
               artists, scholars, and those simply longing for rest and renewal in a world of noise.
               The guest house, library, herb garden, and scriptorium remain central to our life together.
@@ -264,8 +264,8 @@ export default function Home() {
                 { n: "3,000+", label: "Annual Retreatants" },
               ].map(({ n, label }) => (
                 <div key={label}>
-                  <p className="font-serif text-3xl font-bold" style={{ color: "oklch(0.31 0.07 160)" }}>{n}</p>
-                  <p className="text-xs uppercase tracking-widest mt-1" style={{ color: "oklch(0.52 0.03 60)" }}>{label}</p>
+                  <p className="font-serif text-3xl font-bold" style={{ color: "oklch(0.45 0.20 20)" }}>{n}</p>
+                  <p className="text-xs uppercase tracking-widest mt-1" style={{ color: "oklch(0.52 0.03 15)" }}>{label}</p>
                 </div>
               ))}
             </div>
@@ -275,10 +275,10 @@ export default function Home() {
           <div className="relative">
             <div
               className="aspect-[3/4] rounded-sm overflow-hidden relative"
-              style={{ background: "linear-gradient(135deg, oklch(0.26 0.05 50) 0%, oklch(0.31 0.07 160) 100%)" }}
+              style={{ background: "linear-gradient(135deg, oklch(0.26 0.05 15) 0%, oklch(0.45 0.20 20) 100%)" }}
             >
               <div className="absolute inset-0 flex items-center justify-center">
-                <svg width="220" height="280" viewBox="0 0 220 280" fill="none" opacity="0.15" style={{ color: "oklch(0.97 0.02 95)" }}>
+                <svg width="220" height="280" viewBox="0 0 220 280" fill="none" opacity="0.15" style={{ color: "oklch(0.97 0.02 15)" }}>
                   <rect x="10" y="150" width="200" height="130" stroke="currentColor" strokeWidth="2"/>
                   <rect x="30" y="170" width="40" height="60" stroke="currentColor" strokeWidth="1.5"/>
                   <rect x="90" y="190" width="40" height="90" stroke="currentColor" strokeWidth="1.5"/>
@@ -294,12 +294,12 @@ export default function Home() {
               </div>
               <div
                 className="absolute bottom-0 left-0 right-0 p-8"
-                style={{ background: "linear-gradient(to top, oklch(0.18 0.02 50 / 0.9), transparent)" }}
+                style={{ background: "linear-gradient(to top, oklch(0.18 0.03 15 / 0.9), transparent)" }}
               >
-                <p className="font-serif text-lg font-semibold" style={{ color: "oklch(0.97 0.02 95)" }}>
+                <p className="font-serif text-lg font-semibold" style={{ color: "oklch(0.97 0.02 15)" }}>
                   Founded in the tradition of<br />contemplative monasticism
                 </p>
-                <p className="text-xs uppercase tracking-widest mt-2" style={{ color: "oklch(0.72 0.12 80)" }}>
+                <p className="text-xs uppercase tracking-widest mt-2" style={{ color: "oklch(0.55 0.22 20)" }}>
                   Est. 1247 · Mountain Highlands
                 </p>
               </div>
@@ -307,7 +307,7 @@ export default function Home() {
             {/* Gold border accent */}
             <div
               className="absolute -bottom-4 -right-4 w-32 h-32 border-2 rounded-sm -z-10"
-              style={{ borderColor: "oklch(0.72 0.12 80 / 0.4)" }}
+              style={{ borderColor: "oklch(0.55 0.22 20 / 0.4)" }}
             />
           </div>
         </div>
@@ -317,15 +317,15 @@ export default function Home() {
       <section
         id="programs"
         className="py-24 px-6"
-        style={{ background: "oklch(0.22 0.04 50)" }}
+        style={{ background: "oklch(0.22 0.04 15)" }}
       >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <p className="text-xs uppercase tracking-[0.3em] mb-3" style={{ color: "oklch(0.72 0.12 80)" }}>
+            <p className="text-xs uppercase tracking-[0.3em] mb-3" style={{ color: "oklch(0.55 0.22 20)" }}>
               The Rhythm of Our Days
             </p>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold" style={{ color: "oklch(0.93 0.03 90)" }}>
-              Life at Hello
+            <h2 className="font-serif text-4xl md:text-5xl font-bold" style={{ color: "oklch(0.93 0.03 15)" }}>
+              Life at Buna
             </h2>
           </div>
 
@@ -378,14 +378,14 @@ export default function Home() {
               <div
                 key={title}
                 className="p-8 border-t-2 transition-all hover:border-t-amber-400"
-                style={{ background: "oklch(0.26 0.04 50)", borderTopColor: "oklch(0.72 0.12 80 / 0.3)" }}
+                style={{ background: "oklch(0.26 0.04 15)", borderTopColor: "oklch(0.55 0.22 20 / 0.3)" }}
               >
-                <div className="mb-6" style={{ color: "oklch(0.72 0.12 80)" }}>
+                <div className="mb-6" style={{ color: "oklch(0.55 0.22 20)" }}>
                   {icon}
                 </div>
-                <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "oklch(0.52 0.04 80)" }}>{time}</p>
-                <h3 className="font-serif text-xl font-bold mb-3" style={{ color: "oklch(0.93 0.03 90)" }}>{title}</h3>
-                <p className="text-sm leading-relaxed" style={{ color: "oklch(0.62 0.03 70)" }}>{desc}</p>
+                <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "oklch(0.52 0.04 15)" }}>{time}</p>
+                <h3 className="font-serif text-xl font-bold mb-3" style={{ color: "oklch(0.93 0.03 15)" }}>{title}</h3>
+                <p className="text-sm leading-relaxed" style={{ color: "oklch(0.62 0.03 15)" }}>{desc}</p>
               </div>
             ))}
           </div>
@@ -395,14 +395,14 @@ export default function Home() {
       {/* ── Retreats ── */}
       <section id="retreats" className="py-24 px-6 max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <p className="text-xs uppercase tracking-[0.3em] mb-3" style={{ color: "oklch(0.72 0.12 80)" }}>
+          <p className="text-xs uppercase tracking-[0.3em] mb-3" style={{ color: "oklch(0.55 0.22 20)" }}>
             Upcoming Programmes
           </p>
-          <h2 className="font-serif text-4xl md:text-5xl font-bold leading-tight" style={{ color: "oklch(0.18 0.02 50)" }}>
+          <h2 className="font-serif text-4xl md:text-5xl font-bold leading-tight" style={{ color: "oklch(0.18 0.03 15)" }}>
             Retreats & Pilgrimages
           </h2>
-          <p className="mt-4 text-base max-w-xl mx-auto" style={{ color: "oklch(0.52 0.03 60)" }}>
-            Hello welcomes guests of all traditions for days of silence, guided retreats, and
+          <p className="mt-4 text-base max-w-xl mx-auto" style={{ color: "oklch(0.52 0.03 15)" }}>
+            Buna welcomes guests of all traditions for days of silence, guided retreats, and
             pilgrim hospitality. All are welcome at our table.
           </p>
         </div>
@@ -415,7 +415,7 @@ export default function Home() {
               dates: "May 12–18, 2026",
               spots: 8,
               desc: "Six days of guided silent retreat following the monastic rhythm — prayer, reading, walking the ancient paths.",
-              color: "oklch(0.31 0.07 160)",
+              color: "oklch(0.45 0.20 20)",
             },
             {
               tag: "Pilgrimage",
@@ -423,7 +423,7 @@ export default function Home() {
               dates: "June 3–7, 2026",
               spots: 14,
               desc: "A five-day walking pilgrimage through the highland villages, culminating in the monastery chapel.",
-              color: "oklch(0.62 0.08 100)",
+              color: "oklch(0.62 0.12 15)",
               featured: true,
             },
             {
@@ -432,15 +432,15 @@ export default function Home() {
               dates: "July 7–12, 2026",
               spots: 10,
               desc: "A workshop in the scriptorium tradition — learning iconography and manuscript illumination under monastic guidance.",
-              color: "oklch(0.72 0.12 80)",
+              color: "oklch(0.55 0.22 20)",
             },
           ].map(({ tag, title, dates, spots, desc, color, featured }) => (
             <div
               key={title}
               className="rounded-sm overflow-hidden border transition-all hover:-translate-y-1 hover:shadow-lg"
               style={{
-                borderColor: featured ? "oklch(0.72 0.12 80)" : "oklch(0.88 0.03 80)",
-                boxShadow: featured ? "0 0 0 1px oklch(0.72 0.12 80)" : "none",
+                borderColor: featured ? "oklch(0.55 0.22 20)" : "oklch(0.88 0.03 15)",
+                boxShadow: featured ? "0 0 0 1px oklch(0.55 0.22 20)" : "none",
               }}
             >
               <div className="h-2" style={{ background: color }} />
@@ -451,18 +451,18 @@ export default function Home() {
                 >
                   {tag}
                 </span>
-                <h3 className="font-serif text-2xl font-bold mt-4 mb-2" style={{ color: "oklch(0.18 0.02 50)" }}>
+                <h3 className="font-serif text-2xl font-bold mt-4 mb-2" style={{ color: "oklch(0.18 0.03 15)" }}>
                   {title}
                 </h3>
                 <div className="flex items-center gap-4 mb-4">
-                  <p className="text-xs uppercase tracking-widest" style={{ color: "oklch(0.52 0.03 60)" }}>
+                  <p className="text-xs uppercase tracking-widest" style={{ color: "oklch(0.52 0.03 15)" }}>
                     {dates}
                   </p>
-                  <span className="text-xs" style={{ color: "oklch(0.72 0.12 80)" }}>
+                  <span className="text-xs" style={{ color: "oklch(0.55 0.22 20)" }}>
                     {spots} spots left
                   </span>
                 </div>
-                <p className="text-sm leading-relaxed mb-6" style={{ color: "oklch(0.42 0.03 60)" }}>
+                <p className="text-sm leading-relaxed mb-6" style={{ color: "oklch(0.42 0.03 15)" }}>
                   {desc}
                 </p>
                 <a
@@ -477,9 +477,9 @@ export default function Home() {
           ))}
         </div>
 
-        <p className="text-center mt-10 text-sm" style={{ color: "oklch(0.52 0.03 60)" }}>
+        <p className="text-center mt-10 text-sm" style={{ color: "oklch(0.52 0.03 15)" }}>
           Private retreats and group bookings available year-round.{" "}
-          <a href="#visit" className="underline underline-offset-2" style={{ color: "oklch(0.31 0.07 160)" }}>
+          <a href="#visit" className="underline underline-offset-2" style={{ color: "oklch(0.45 0.20 20)" }}>
             Contact the guestmaster.
           </a>
         </p>
@@ -490,15 +490,15 @@ export default function Home() {
         id="community"
         className="py-24 px-6"
         style={{
-          background: `linear-gradient(135deg, oklch(0.31 0.07 160) 0%, oklch(0.26 0.05 50) 100%)`,
+          background: `linear-gradient(135deg, oklch(0.45 0.20 20) 0%, oklch(0.26 0.05 15) 100%)`,
         }}
       >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <p className="text-xs uppercase tracking-[0.3em] mb-3" style={{ color: "oklch(0.72 0.12 80)" }}>
+            <p className="text-xs uppercase tracking-[0.3em] mb-3" style={{ color: "oklch(0.55 0.22 20)" }}>
               Pillars of Our Life
             </p>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold" style={{ color: "oklch(0.97 0.02 95)" }}>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold" style={{ color: "oklch(0.97 0.02 15)" }}>
               What We Offer
             </h2>
           </div>
@@ -538,7 +538,7 @@ export default function Home() {
                   </svg>
                 ),
                 title: "Oblate Community",
-                desc: "Nearly 200 oblates around the world live the Hello charism in their daily lives — joining our community from a distance through prayer, study, and annual gatherings.",
+                desc: "Nearly 200 oblates around the world live the Buna charism in their daily lives — joining our community from a distance through prayer, study, and annual gatherings.",
               },
               {
                 icon: (
@@ -577,11 +577,11 @@ export default function Home() {
                 className="p-8 rounded-sm"
                 style={{ background: "oklch(1 0 0 / 0.05)", border: "1px solid oklch(1 0 0 / 0.1)" }}
               >
-                <div className="mb-5" style={{ color: "oklch(0.72 0.12 80)" }}>{icon}</div>
-                <h3 className="font-serif text-xl font-bold mb-3" style={{ color: "oklch(0.97 0.02 95)" }}>
+                <div className="mb-5" style={{ color: "oklch(0.55 0.22 20)" }}>{icon}</div>
+                <h3 className="font-serif text-xl font-bold mb-3" style={{ color: "oklch(0.97 0.02 15)" }}>
                   {title}
                 </h3>
-                <p className="text-sm leading-relaxed" style={{ color: "oklch(0.78 0.05 75 / 0.8)" }}>{desc}</p>
+                <p className="text-sm leading-relaxed" style={{ color: "oklch(0.78 0.05 15 / 0.8)" }}>{desc}</p>
               </div>
             ))}
           </div>
@@ -589,13 +589,13 @@ export default function Home() {
       </section>
 
       {/* ── Testimonials ── */}
-      <section className="py-24 px-6" style={{ background: "oklch(0.93 0.03 90)" }}>
+      <section className="py-24 px-6" style={{ background: "oklch(0.93 0.03 15)" }}>
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <p className="text-xs uppercase tracking-[0.3em] mb-3" style={{ color: "oklch(0.72 0.12 80)" }}>
+            <p className="text-xs uppercase tracking-[0.3em] mb-3" style={{ color: "oklch(0.55 0.22 20)" }}>
               From Our Guests
             </p>
-            <h2 className="font-serif text-4xl font-bold" style={{ color: "oklch(0.18 0.02 50)" }}>
+            <h2 className="font-serif text-4xl font-bold" style={{ color: "oklch(0.18 0.03 15)" }}>
               Words from Pilgrims
             </h2>
           </div>
@@ -603,7 +603,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                quote: "A week at Hello gave me more than a year of ordinary life. The silence was not empty — it was full.",
+                quote: "A week at Buna gave me more than a year of ordinary life. The silence was not empty — it was full.",
                 name: "Elena M.",
                 from: "Prague, Czech Republic",
               },
@@ -613,7 +613,7 @@ export default function Home() {
                 from: "Lagos, Nigeria",
               },
               {
-                quote: "The chant, the garden, the library — there is a wholeness to life at Hello that the world beyond the walls seems to have forgotten.",
+                quote: "The chant, the garden, the library — there is a wholeness to life at Buna that the world beyond the walls seems to have forgotten.",
                 name: "Miriam K.",
                 from: "Seattle, USA",
               },
@@ -621,15 +621,15 @@ export default function Home() {
               <div
                 key={name}
                 className="p-8 rounded-sm"
-                style={{ background: "oklch(0.97 0.02 95)", border: "1px solid oklch(0.88 0.03 80)" }}
+                style={{ background: "oklch(0.97 0.02 15)", border: "1px solid oklch(0.88 0.03 15)" }}
               >
-                <div className="text-2xl mb-4" style={{ color: "oklch(0.72 0.12 80)" }}>&ldquo;</div>
-                <p className="text-sm leading-relaxed italic mb-6" style={{ color: "oklch(0.32 0.03 60)" }}>
+                <div className="text-2xl mb-4" style={{ color: "oklch(0.55 0.22 20)" }}>&ldquo;</div>
+                <p className="text-sm leading-relaxed italic mb-6" style={{ color: "oklch(0.32 0.03 15)" }}>
                   {quote}
                 </p>
-                <div className="border-t pt-4" style={{ borderColor: "oklch(0.88 0.03 80)" }}>
-                  <p className="text-sm font-semibold" style={{ color: "oklch(0.18 0.02 50)" }}>{name}</p>
-                  <p className="text-xs uppercase tracking-widest mt-1" style={{ color: "oklch(0.52 0.03 60)" }}>{from}</p>
+                <div className="border-t pt-4" style={{ borderColor: "oklch(0.88 0.03 15)" }}>
+                  <p className="text-sm font-semibold" style={{ color: "oklch(0.18 0.03 15)" }}>{name}</p>
+                  <p className="text-xs uppercase tracking-widest mt-1" style={{ color: "oklch(0.52 0.03 15)" }}>{from}</p>
                 </div>
               </div>
             ))}
@@ -641,14 +641,14 @@ export default function Home() {
       <section id="visit" className="py-24 px-6 max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16">
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] mb-3" style={{ color: "oklch(0.72 0.12 80)" }}>
+            <p className="text-xs uppercase tracking-[0.3em] mb-3" style={{ color: "oklch(0.55 0.22 20)" }}>
               Find Us
             </p>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6" style={{ color: "oklch(0.18 0.02 50)" }}>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6" style={{ color: "oklch(0.18 0.03 15)" }}>
               Plan Your Visit
             </h2>
-            <p className="text-base leading-loose mb-8" style={{ color: "oklch(0.42 0.03 60)" }}>
-              Hello Monastery sits at 1,840 metres above sea level in the highland region,
+            <p className="text-base leading-loose mb-8" style={{ color: "oklch(0.42 0.03 15)" }}>
+              Buna Monastery sits at 1,840 metres above sea level in the highland region,
               accessible by road or a half-day mountain walk. Accommodation in our guest house
               is offered on a donation basis for those on personal retreat.
             </p>
@@ -657,7 +657,7 @@ export default function Home() {
               {[
                 {
                   label: "Address",
-                  value: "Hello Monastery, Mountain Highlands\nRegion of St. Columbanus, Est. 1247",
+                  value: "Buna Monastery, Mountain Highlands\nRegion of St. Columbanus, Est. 1247",
                 },
                 {
                   label: "Guestmaster",
@@ -672,11 +672,11 @@ export default function Home() {
                   value: "Chapel open daily 5:30 AM – 9:00 PM\nShop: Mon–Sat, 9 AM – 5 PM",
                 },
               ].map(({ label, value }) => (
-                <div key={label} className="flex gap-6 pb-6 border-b" style={{ borderColor: "oklch(0.88 0.03 80)" }}>
+                <div key={label} className="flex gap-6 pb-6 border-b" style={{ borderColor: "oklch(0.88 0.03 15)" }}>
                   <div className="w-24 flex-shrink-0">
-                    <p className="text-xs uppercase tracking-widest" style={{ color: "oklch(0.72 0.12 80)" }}>{label}</p>
+                    <p className="text-xs uppercase tracking-widest" style={{ color: "oklch(0.55 0.22 20)" }}>{label}</p>
                   </div>
-                  <p className="text-sm leading-relaxed whitespace-pre-line" style={{ color: "oklch(0.32 0.03 60)" }}>
+                  <p className="text-sm leading-relaxed whitespace-pre-line" style={{ color: "oklch(0.32 0.03 15)" }}>
                     {value}
                   </p>
                 </div>
@@ -686,10 +686,10 @@ export default function Home() {
 
           {/* Contact form */}
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] mb-3" style={{ color: "oklch(0.72 0.12 80)" }}>
+            <p className="text-xs uppercase tracking-[0.3em] mb-3" style={{ color: "oklch(0.55 0.22 20)" }}>
               Write to Us
             </p>
-            <h2 className="font-serif text-4xl font-bold mb-6" style={{ color: "oklch(0.18 0.02 50)" }}>
+            <h2 className="font-serif text-4xl font-bold mb-6" style={{ color: "oklch(0.18 0.03 15)" }}>
               Enquire About a Retreat
             </h2>
 
@@ -702,10 +702,10 @@ export default function Home() {
                       placeholder={ph}
                       className="w-full px-4 py-3 text-sm bg-transparent border rounded-sm outline-none focus:ring-1 transition-all"
                       style={{
-                        borderColor: "oklch(0.78 0.03 80)",
-                        color: "oklch(0.18 0.02 50)",
+                        borderColor: "oklch(0.78 0.03 15)",
+                        color: "oklch(0.18 0.03 15)",
                         borderRadius: "2px",
-                        "--tw-ring-color": "oklch(0.72 0.12 80)",
+                        "--tw-ring-color": "oklch(0.55 0.22 20)",
                       } as React.CSSProperties}
                     />
                   </div>
@@ -715,11 +715,11 @@ export default function Home() {
                 type="email"
                 placeholder="Email address"
                 className="w-full px-4 py-3 text-sm bg-transparent border rounded-sm outline-none focus:ring-1 transition-all"
-                style={{ borderColor: "oklch(0.78 0.03 80)", color: "oklch(0.18 0.02 50)", borderRadius: "2px" } as React.CSSProperties}
+                style={{ borderColor: "oklch(0.78 0.03 15)", color: "oklch(0.18 0.03 15)", borderRadius: "2px" } as React.CSSProperties}
               />
               <select
                 className="w-full px-4 py-3 text-sm bg-transparent border outline-none focus:ring-1 transition-all"
-                style={{ borderColor: "oklch(0.78 0.03 80)", color: "oklch(0.52 0.03 60)", borderRadius: "2px" } as React.CSSProperties}
+                style={{ borderColor: "oklch(0.78 0.03 15)", color: "oklch(0.52 0.03 15)", borderRadius: "2px" } as React.CSSProperties}
               >
                 <option value="">Interest — select a programme</option>
                 <option>The Great Silence (May 12–18, 2026)</option>
@@ -732,21 +732,21 @@ export default function Home() {
                 rows={4}
                 placeholder="Tell us a little about yourself and what you are seeking..."
                 className="w-full px-4 py-3 text-sm bg-transparent border rounded-sm outline-none focus:ring-1 transition-all resize-none"
-                style={{ borderColor: "oklch(0.78 0.03 80)", color: "oklch(0.18 0.02 50)", borderRadius: "2px" } as React.CSSProperties}
+                style={{ borderColor: "oklch(0.78 0.03 15)", color: "oklch(0.18 0.03 15)", borderRadius: "2px" } as React.CSSProperties}
               />
               <button
                 type="submit"
                 className="w-full py-4 text-sm uppercase tracking-widest font-semibold transition-all hover:opacity-90 hover:shadow-md"
                 style={{
-                  background: "oklch(0.31 0.07 160)",
-                  color: "oklch(0.97 0.02 95)",
+                  background: "oklch(0.45 0.20 20)",
+                  color: "oklch(0.97 0.02 15)",
                   borderRadius: "2px",
                   letterSpacing: "0.12em",
                 }}
               >
                 Send Enquiry
               </button>
-              <p className="text-xs text-center" style={{ color: "oklch(0.62 0.03 70)" }}>
+              <p className="text-xs text-center" style={{ color: "oklch(0.62 0.03 15)" }}>
                 The guestmaster responds within three working days. All guests are
                 welcome regardless of faith background.
               </p>
@@ -758,30 +758,30 @@ export default function Home() {
       {/* ── Newsletter ── */}
       <section
         className="py-16 px-6 text-center"
-        style={{ background: "oklch(0.97 0.02 95)", borderTop: "1px solid oklch(0.88 0.03 80)" }}
+        style={{ background: "oklch(0.97 0.02 15)", borderTop: "1px solid oklch(0.88 0.03 15)" }}
       >
         <div className="max-w-xl mx-auto">
-          <p className="text-xs uppercase tracking-[0.3em] mb-3" style={{ color: "oklch(0.72 0.12 80)" }}>
+          <p className="text-xs uppercase tracking-[0.3em] mb-3" style={{ color: "oklch(0.55 0.22 20)" }}>
             Stay Connected
           </p>
-          <h3 className="font-serif text-3xl font-bold mb-3" style={{ color: "oklch(0.18 0.02 50)" }}>
+          <h3 className="font-serif text-3xl font-bold mb-3" style={{ color: "oklch(0.18 0.03 15)" }}>
             The Monastery Letter
           </h3>
-          <p className="text-sm mb-6" style={{ color: "oklch(0.52 0.03 60)" }}>
+          <p className="text-sm mb-6" style={{ color: "oklch(0.52 0.03 15)" }}>
             Receive our seasonal newsletter — reflections from the community, programme announcements,
-            and the quiet news of life at Hello.
+            and the quiet news of life at Buna.
           </p>
           <form className="flex gap-3 max-w-sm mx-auto" onSubmit={(e) => e.preventDefault()}>
             <input
               type="email"
               placeholder="Your email address"
               className="flex-1 px-4 py-3 text-sm bg-transparent border outline-none"
-              style={{ borderColor: "oklch(0.78 0.03 80)", color: "oklch(0.18 0.02 50)", borderRadius: "2px" } as React.CSSProperties}
+              style={{ borderColor: "oklch(0.78 0.03 15)", color: "oklch(0.18 0.03 15)", borderRadius: "2px" } as React.CSSProperties}
             />
             <button
               type="submit"
               className="px-5 py-3 text-xs uppercase tracking-widest font-semibold transition-opacity hover:opacity-80"
-              style={{ background: "oklch(0.72 0.12 80)", color: "oklch(0.13 0.03 50)", borderRadius: "2px" }}
+              style={{ background: "oklch(0.55 0.22 20)", color: "oklch(0.13 0.03 15)", borderRadius: "2px" }}
             >
               Subscribe
             </button>
@@ -792,7 +792,7 @@ export default function Home() {
       {/* ── Footer ── */}
       <footer
         className="py-12 px-6"
-        style={{ background: "oklch(0.13 0.03 50)", color: "oklch(0.62 0.03 70)" }}
+        style={{ background: "oklch(0.13 0.03 15)", color: "oklch(0.62 0.03 15)" }}
       >
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-10 mb-10 pb-10 border-b" style={{ borderColor: "oklch(1 0 0 / 0.08)" }}>
@@ -800,25 +800,25 @@ export default function Home() {
               <div className="flex items-center gap-3 mb-4">
                 <div
                   className="w-8 h-8 flex items-center justify-center rounded-full"
-                  style={{ background: "oklch(0.72 0.12 80 / 0.2)", color: "oklch(0.72 0.12 80)" }}
+                  style={{ background: "oklch(0.55 0.22 20 / 0.2)", color: "oklch(0.55 0.22 20)" }}
                 >
                   <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
                     <path d="M10 2L10 6M6 8H14M5 18H15M5 18V10M15 18V10M5 10L10 6L15 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     <circle cx="10" cy="13" r="1.5" fill="currentColor"/>
                   </svg>
                 </div>
-                <span className="font-serif text-xl font-bold tracking-widest uppercase" style={{ color: "oklch(0.93 0.03 90)" }}>
-                  Hello
+                <span className="font-serif text-xl font-bold tracking-widest uppercase" style={{ color: "oklch(0.93 0.03 15)" }}>
+                  Buna
                 </span>
               </div>
-              <p className="text-sm leading-loose max-w-xs" style={{ color: "oklch(0.52 0.03 65)" }}>
+              <p className="text-sm leading-loose max-w-xs" style={{ color: "oklch(0.52 0.03 15)" }}>
                 A community of contemplative monks living the ancient Rule in the mountain highlands,
                 open to all who seek silence and renewal.
               </p>
             </div>
 
             <div>
-              <p className="text-xs uppercase tracking-widest mb-4" style={{ color: "oklch(0.72 0.12 80)" }}>Visit</p>
+              <p className="text-xs uppercase tracking-widest mb-4" style={{ color: "oklch(0.55 0.22 20)" }}>Visit</p>
               <ul className="space-y-2 text-sm">
                 {["Guest House", "Chapel", "Library & Shop", "Herb Garden", "Getting Here"].map((l) => (
                   <li key={l}>
@@ -829,9 +829,9 @@ export default function Home() {
             </div>
 
             <div>
-              <p className="text-xs uppercase tracking-widest mb-4" style={{ color: "oklch(0.72 0.12 80)" }}>Community</p>
+              <p className="text-xs uppercase tracking-widest mb-4" style={{ color: "oklch(0.55 0.22 20)" }}>Community</p>
               <ul className="space-y-2 text-sm">
-                {["About Hello", "Our History", "Oblates", "Retreats", "Contact"].map((l) => (
+                {["About Buna", "Our History", "Oblates", "Retreats", "Contact"].map((l) => (
                   <li key={l}>
                     <a href="#about" className="hover:opacity-70 transition-opacity">{l}</a>
                   </li>
@@ -841,12 +841,12 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
-            <p style={{ color: "oklch(0.42 0.03 60)" }}>
-              © 2026 Hello Monastery. Pray and work — <em>ora et labora.</em>
+            <p style={{ color: "oklch(0.42 0.03 15)" }}>
+              © 2026 Buna Monastery. Pray and work — <em>ora et labora.</em>
             </p>
             <div className="flex gap-6">
               {["Privacy", "Terms", "Accessibility"].map((l) => (
-                <a key={l} href="#" className="hover:opacity-70 transition-opacity" style={{ color: "oklch(0.42 0.03 60)" }}>
+                <a key={l} href="#" className="hover:opacity-70 transition-opacity" style={{ color: "oklch(0.42 0.03 15)" }}>
                   {l}
                 </a>
               ))}
